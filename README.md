@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🎨 Canvasium
 
-## Getting Started
+**Canvasium** is an iconic paintings gallery featuring smooth slideshow transitions, keyboard navigation, and light/dark theme support — all built using modern frontend tools.
 
-First, run the development server:
+## 🖼️ Project Description
+
+Canvasium is a visually rich and interactive gallery of timeless artwork. Designed with accessibility and polish in mind, it allows users to explore iconic paintings with a minimalist UI and immersive slideshow experience.
+
+## ⚙️ Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+## ✨ Features
+
+- ⌨️ **Keyboard navigation**: Arrow keys to navigate, spacebar to pause/resume slideshow.
+- 🌗 **Light/Dark mode**: Toggle between themes for better visual comfort.
+- 🖼️ **Slideshow functionality**: Automatic and manual navigation through artworks.
+- 🎞️ **Smooth animations**: Powered by Framer Motion for an elegant user experience.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have **Node.js** and **pnpm** installed:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install -g pnpm
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+pnpm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit `http://localhost:3000` to view it locally.
 
-## Learn More
+## 🌐 Live Site
 
-To learn more about Next.js, take a look at the following resources:
+Deployed on Vercel: [https://canvasium.vercel.app](https://canvasium.vercel.app)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Credits
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Design by [Frontend Mentor](https://www.frontendmentor.io/).
 
-## Deploy on Vercel
+## 📸 Screenshots
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Light Mode
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Light Mode](./screenshots/home_light.png)
+
+![Light Mode](./screenshots/slideshow_light.png)
+
+### Dark Mode
+
+![Dark Mode](./screenshots/home_dark.png)
+
+![Dark Mode](./screenshots/slideshow_dark.png)

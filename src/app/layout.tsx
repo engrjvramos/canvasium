@@ -8,32 +8,37 @@ import './globals.css';
 const libreBaskerville = Libre_Baskerville({
   variable: '--font-libre-baskerville',
   subsets: ['latin'],
-  weight: ['400', '700'], // Regular and Bold
+  weight: ['400', '700'],
 });
 
 export const metadata: Metadata = {
-  title: 'ArtiumXII | Discover Iconic Paintings',
+  title: 'Canvasium | Discover Iconic Paintings',
   description: 'Explore a curated collection of famous paintings and timeless art from masters around the world.',
-  keywords: ['art', 'paintings', 'gallery', 'classic art', 'famous painters', 'art appreciation'],
-  authors: [{ name: 'Jose Roberto Vasquez Ramos', url: 'https://engrjvramos.com' }],
+  keywords: ['art', 'paintings', 'gallery', 'classic art', 'famous painters', 'art appreciation', 'famous paintings'],
+  authors: [{ name: 'Jose Roberto Vasquez Ramos', url: 'https://jobie.dev' }],
   creator: 'Jose Roberto Vasquez Ramos',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
-    title: 'ArtiumXII | Discover Iconic Paintings',
+    title: 'Canvasium | Discover Iconic Paintings',
     description: 'A beautifully designed collection of famous artworks — experience art like never before.',
-    url: 'https://artiumxii.com',
-    siteName: 'ArtiumXII',
+    url: 'https://canvasium.vercel.app',
+    siteName: 'Canvasium',
     images: [
       {
-        url: 'https://artiumxii.com/og-image.jpg',
+        url: 'https://canvasium.vercel.app/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Preview of the ArtiumXII website',
+        alt: 'Preview of the canvasium website',
       },
     ],
     locale: 'en_US',
     type: 'website',
   },
-  metadataBase: new URL('https://artiumxii.com'),
+  metadataBase: new URL('https://canvasium.vercel.app'),
 };
 
 export default function RootLayout({

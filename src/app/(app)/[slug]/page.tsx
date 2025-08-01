@@ -7,6 +7,7 @@ import { Progress } from '@/components/ui/progress';
 import { useWindowSize } from '@/hooks/useWindowSize';
 import { slugify } from '@/lib/utils';
 import { motion } from 'framer-motion';
+import { throttle } from 'lodash';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound, useRouter } from 'next/navigation';
@@ -52,20 +53,27 @@ export default function PaintingPage(props: { params: Promise<{ slug: string }> 
   const togglePause = useCallback(() => setPause(!pause), [setPause, pause]);
 
   useEffect(() => {
+    const throttledNavigation = throttle((code: string) => {
+      if (code === 'ArrowRight' && nextPainting) {
+        goToPainting(nextPainting.name);
+      } else if (code === 'ArrowLeft' && prevPainting) {
+        goToPainting(prevPainting.name);
+      }
+    }, 500);
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.code === 'Space') {
         e.preventDefault();
         togglePause();
-      } else if (e.code === 'ArrowRight' && nextPainting) {
-        goToPainting(nextPainting.name);
-      } else if (e.code === 'ArrowLeft' && prevPainting) {
-        goToPainting(prevPainting.name);
+      } else if (e.code === 'ArrowRight' || e.code === 'ArrowLeft') {
+        e.preventDefault();
+        throttledNavigation(e.code);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [goToPainting, nextPainting, prevPainting, setPause, togglePause]);
+  }, [goToPainting, nextPainting, prevPainting, togglePause]);
 
   if (!painting) return notFound();
 
@@ -83,8 +91,9 @@ export default function PaintingPage(props: { params: Promise<{ slug: string }> 
               <Image
                 src={size.width >= 640 ? painting.images.hero.large : painting.images.hero.small}
                 alt={painting.name}
-                width={475}
-                height={560}
+                width={0}
+                height={0}
+                sizes="100vw"
                 placeholder="blur"
                 blurDataURL={painting.images.hero.large}
                 className="mx-auto sm:mx-0 xl:h-[560px] xl:w-[475px]"

@@ -28,15 +28,13 @@ export default function Home() {
               <Image
                 src={painting.images.thumbnail}
                 alt={painting.name}
-                width={painting.images.thumbWidth}
-                height={painting.images.thumbHeight}
+                width={0}
+                height={0}
+                sizes="100vw"
                 placeholder="blur"
                 blurDataURL={painting.images.thumbnail}
                 className="object-cover"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                }}
+                style={{ width: '100%', height: 'auto' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-80" />
 

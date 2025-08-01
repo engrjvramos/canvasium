@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Footer() {
@@ -9,13 +8,27 @@ export default function Footer() {
 
   return (
     <footer className="flex items-center justify-center p-5 sm:p-10 sm:pt-0">
-      <p className="text-muted-foreground text-center font-mono text-xs text-balance uppercase">
+      <div className="text-muted-foreground text-center font-mono text-xs text-balance uppercase">
         &copy; Design by{' '}
-        <Link href={'https://www.frontendmentor.io/'} target="_blank" className="hover:underline">
+        <a
+          href={'https://www.frontendmentor.io/'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-pink-400 hover:underline dark:hover:text-pink-400"
+        >
           Frontend Mentor
-        </Link>
-        . Coded by Jose Roberto Vasquez Ramos.
-      </p>
+        </a>
+        . Coded by{' '}
+        <a
+          href={'https://jobie.dev'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-pink-400 hover:underline dark:hover:text-pink-400"
+        >
+          Jose Roberto Vasquez Ramos
+        </a>
+        .
+      </div>
     </footer>
   );
 }

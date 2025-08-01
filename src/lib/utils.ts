@@ -1,3 +1,4 @@
+import paintings from '@/lib/data.json';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -6,8 +7,6 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export async function getPaintings() {
-  const response = await fetch('http://localhost:3000/data.json');
-  const paintings = await response.json();
   return paintings;
 }
 

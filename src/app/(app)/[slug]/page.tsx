@@ -95,6 +95,7 @@ export default function PaintingPage(props: { params: Promise<{ slug: string }> 
                 width={0}
                 height={0}
                 sizes="100vw"
+                priority
                 placeholder="blur"
                 blurDataURL={painting.images.hero.large}
                 className="mx-auto sm:mx-0 xl:h-[560px] xl:w-[475px]"

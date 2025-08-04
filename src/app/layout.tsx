@@ -1,6 +1,7 @@
 import { PaintingsProvider } from '@/components/providers/painting-provider';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 import { getPaintings } from '@/lib/utils';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { Libre_Baskerville } from 'next/font/google';
 import './globals.css';
@@ -54,6 +55,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <PaintingsProvider paintingsPromise={paintingsPromise}>{children}</PaintingsProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

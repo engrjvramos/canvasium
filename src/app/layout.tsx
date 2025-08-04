@@ -3,13 +3,19 @@ import { ThemeProvider } from '@/components/providers/theme-provider';
 import { getPaintings } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
-import { Libre_Baskerville } from 'next/font/google';
+import { Libre_Baskerville, Poppins } from 'next/font/google';
 import './globals.css';
 
 const libreBaskerville = Libre_Baskerville({
   variable: '--font-libre-baskerville',
   subsets: ['latin'],
   weight: ['400', '700'],
+});
+
+const poppins = Poppins({
+  variable: '--font-poppins',
+  subsets: ['latin'],
+  weight: ['400'],
 });
 
 export const metadata: Metadata = {
@@ -51,7 +57,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${libreBaskerville.variable} font-sans antialiased`}>
+      <body className={`${libreBaskerville.variable} ${poppins.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <PaintingsProvider paintingsPromise={paintingsPromise}>{children}</PaintingsProvider>
         </ThemeProvider>

@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import SocialLinks from './social-links';
 
 export default function Footer() {
   const pathname = usePathname();
@@ -8,26 +9,17 @@ export default function Footer() {
 
   return (
     <footer className="flex items-center justify-center p-5 sm:p-10 sm:pt-0">
-      <div className="text-muted-foreground text-center font-mono text-xs text-balance uppercase">
-        &copy; Design by{' '}
+      <div className="text-muted-foreground font-poppins text-center text-[13px] text-balance">
+        &copy; Coded as part of a{' '}
         <a
-          href={'https://www.frontendmentor.io/'}
+          href="https://www.frontendmentor.io/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-pink-400 hover:underline dark:hover:text-pink-400"
+          className="hover:text-theme-secondary dark:hover:text-theme-primary hover:underline"
         >
           Frontend Mentor
-        </a>
-        . Coded by{' '}
-        <a
-          href={'https://jobie.dev'}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-pink-400 hover:underline dark:hover:text-pink-400"
-        >
-          Jose Roberto Vasquez Ramos
-        </a>
-        .
+        </a>{' '}
+        challenge. Built by <SocialLinks />. All rights reserved.
       </div>
     </footer>
   );

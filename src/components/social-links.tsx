@@ -38,7 +38,7 @@ const SOCIAL_LINKS = [
 export default function SocialLinks() {
   return (
     <Dialog>
-      <DialogTrigger className="hover:text-theme-secondary dark:hover:text-theme-primary cursor-pointer text-inherit hover:underline">
+      <DialogTrigger className="cursor-pointer text-inherit hover:text-black hover:underline dark:hover:text-white">
         Jobie Ramos
       </DialogTrigger>
       <DialogContent className="font-poppins">

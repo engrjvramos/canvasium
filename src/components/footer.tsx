@@ -8,18 +8,22 @@ export default function Footer() {
   if (pathname !== '/') return null;
 
   return (
-    <footer className="flex items-center justify-center p-5 sm:p-10 sm:pt-0">
-      <div className="text-muted-foreground font-poppins text-center text-[13px] text-balance">
-        &copy; Coded as part of a{' '}
+    <footer className="flex items-center justify-center bg-white p-5 py-8 dark:bg-neutral-900">
+      <div className="text-muted-foreground font-poppins flex flex-col items-center gap-1 text-center text-sm sm:flex-row sm:gap-2">
+        <span>© {new Date().getFullYear()}</span>
+        <span className="hidden sm:inline">•</span>
+        <span>
+          Built by <SocialLinks />
+        </span>
+        <span className="hidden sm:inline">•</span>
         <a
           href="https://www.frontendmentor.io/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-theme-secondary dark:hover:text-theme-primary hover:underline"
+          className="hover:text-black hover:underline dark:hover:text-white"
         >
-          Frontend Mentor
-        </a>{' '}
-        challenge. Built by <SocialLinks />. All rights reserved.
+          Frontend Mentor Challenge
+        </a>
       </div>
     </footer>
   );

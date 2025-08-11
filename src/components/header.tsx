@@ -25,8 +25,8 @@ export default function Header() {
   };
 
   return (
-    <header className="px-6 xl:px-10">
-      <div className="flex items-center justify-between border-b py-6 xl:py-10">
+    <header className="shrink-0">
+      <div className="mx-auto flex h-20 max-w-[90rem] items-center justify-between border-b px-5 xl:h-32 xl:px-10">
         <Link href={'/'} className="text-[clamp(24px,5vw,48px)] font-extrabold">
           {/* <Icons.logo className="h-[clamp(32px,15vw,48px)] w-[clamp(114px,15vw,170px)]" /> */}
           canvasium.

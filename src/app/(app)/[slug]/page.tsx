@@ -80,7 +80,7 @@ export default function PaintingPage(props: { params: Promise<{ slug: string }> 
 
   return (
     <div className="flex h-[calc(100dvh-5rem)] flex-col overflow-hidden xl:h-[calc(100dvh-8rem)]">
-      <article className="flex-1 overflow-y-auto xl:grid xl:place-items-center">
+      <article className="no-scrollbar flex-1 overflow-y-auto xl:grid xl:place-items-center">
         <div className="flex w-full flex-1 items-center justify-center px-5 py-10 sm:p-10">
           <div className="mx-auto flex h-full w-full max-w-3xl flex-col sm:gap-16 xl:max-h-[624px] xl:max-w-full xl:flex-row xl:gap-10">
             <motion.section

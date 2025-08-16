@@ -1,11 +1,18 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import SocialLinks from './social-links';
 
 export default function Footer() {
   const pathname = usePathname();
-  if (pathname !== '/') return null;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted || pathname !== '/') return null;
 
   return (
     <footer className="flex items-center justify-center bg-white p-5 py-8 dark:bg-neutral-900">

@@ -3,7 +3,7 @@
 import { slugify } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { use } from 'react';
+import { use, useEffect, useState } from 'react';
 import { Icons } from './icons';
 import { usePaintingContext } from './providers/painting-provider';
 import ThemeToggler from './theme-toggler';
@@ -15,6 +15,12 @@ export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const handleSlideShow = () => {
     if (pathname === '/') {
       setPause(false);
@@ -23,6 +29,8 @@ export default function Header() {
       router.push('/');
     }
   };
+
+  if (!mounted) return null;
 
   return (
     <header className="shrink-0">

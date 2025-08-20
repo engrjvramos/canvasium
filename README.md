@@ -1,63 +1,85 @@
-## 🎨 Canvasium
+# Canvasium — Discover Iconic Paintings
 
-**Canvasium** is an iconic paintings gallery featuring smooth slideshow transitions, keyboard navigation, and light/dark theme support — all built using modern frontend tools.
+**Canvasium** is a refined gallery slideshow web app that lets you explore famous art pieces in style. Navigate effortlessly through a curated collection of masterpieces using smooth transitions and a minimalist UI.
 
-## 🖼️ Project Description
+## 🌐 Live Demo
 
-Canvasium is a visually rich and interactive gallery of timeless artwork. Designed with accessibility and polish in mind, it allows users to explore iconic paintings with a minimalist UI and immersive slideshow experience.
+Explore Canvasium live 👉 [canvasium.vercel.app](https://canvasium.vercel.app)
 
-## ⚙️ Tech Stack
+## 📚 Challenge
 
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [shadcn/ui](https://ui.shadcn.com/)
-- [Framer Motion](https://www.framer.com/motion/)
+This project was built for the Frontend Mentor - Galleria slideshow site challenge.
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+👉 [View the challenge here](https://www.frontendmentor.io/challenges/galleria-slideshow-site-tEA4pwsa6)
 
 ## ✨ Features
 
-- ⌨️ **Keyboard navigation**: Arrow keys to navigate, spacebar to pause/resume slideshow.
-- 🌗 **Light/Dark mode**: Toggle between themes for better visual comfort.
-- 🖼️ **Slideshow functionality**: Automatic and manual navigation through artworks.
-- 🎞️ **Smooth animations**: Powered by Framer Motion for an elegant user experience.
+| Function              | Description                                                         |
+| :-------------------- | :------------------------------------------------------------------ |
+| Dark Mode             | Seamless light/dark theme toggle.                                   |
+| Masonry Layout        | A dynamic grid system which positions each item based on its height |
+| Slideshow             | Automatic and manual navigation through artworks                    |
+| Accessible Navigation | Arrow keys to navigate, spacebar to pause/resume slideshow          |
+| Responsive Design     | Optimized for desktop, tablet, and mobile.                          |
+| Fluid Animations      | Beautiful transitions powered by Framer Motion.                     |
+
+## 🛠 Tech Stack
+
+| Tech Stack                                      | Description                               |
+| :---------------------------------------------- | :---------------------------------------- |
+| [Next.js v15](https://nextjs.org/)              | React framework with SSR support          |
+| [TypeScript](https://www.typescriptlang.org/)   | Strongly typed JavaScript                 |
+| [Tailwind CSS v4](https://tailwindcss.com/)     | Utility-first styling                     |
+| [shadcn/ui](https://ui.shadcn.com/)             | Accessible and customizable UI components |
+| [Framer Motion](https://www.framer.com/motion/) | Smooth animations and transitions         |
 
 ## 🚀 Getting Started
 
-### Prerequisites
+**Fork this repo**
+You can fork this repo by clicking the fork button in the top right corner of this page.
 
-Ensure you have **Node.js** and **pnpm** installed:
+**Clone on your local machine**
 
 ```bash
-npm install -g pnpm
+git clone https://github.com/engrjvramos/canvasium.git
 ```
 
-### Installation
+**Navigate to project directory**
+
+```bash
+cd canvasium
+```
+
+**Create a new branch**
+
+```bash
+git checkout -b my-new-branch
+```
+
+**Install dependencies**
 
 ```bash
 pnpm install
+```
+
+**Run the development server**
+
+```bash
 pnpm run dev
 ```
 
-Visit `http://localhost:3000` to view it locally.
+Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
 
-## 🌐 Live Site
+## 📷 Screenshots
 
-Deployed on Vercel: [https://canvasium.vercel.app](https://canvasium.vercel.app)
+![](./screenshots/screenshot_1.png)
+![](./screenshots/screenshot_2.png)
 
-## 🎨 Credits
+## 🤝 Contributing
 
-Design by [Frontend Mentor](https://www.frontendmentor.io/).
+Contributions are welcome! If you’d like to improve **Canvasium**, please fork the repo and submit a PR.
 
-## 📸 Screenshots
+## 📄 License
 
-### Light Mode
-
-![Light Mode](./screenshots/home_light.png)
-
-![Light Mode](./screenshots/slideshow_light.png)
-
-### Dark Mode
-
-![Dark Mode](./screenshots/home_dark.png)
-
-![Dark Mode](./screenshots/slideshow_dark.png)
+This project is open-source under the MIT License. Feel free to fork, modify, and build upon it.

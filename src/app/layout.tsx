@@ -19,7 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Canvasium | Discover Iconic Paintings',
+  title: 'Canvasium - Discover Iconic Paintings',
   description: 'Explore a curated collection of famous paintings and timeless art from masters around the world.',
   keywords: ['art', 'paintings', 'gallery', 'classic art', 'famous painters', 'art appreciation', 'famous paintings'],
   authors: [{ name: 'Jose Roberto Vasquez Ramos', url: 'https://jobie.dev' }],
